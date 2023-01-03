@@ -3,6 +3,17 @@ import React from 'react';
 import PropTypes from "prop-types";
 import {Icon} from "react-icons-kit";
 import {star} from 'react-icons-kit/fa/star'
+/**
+ * 
+ * @param {number} count  No. of  icons needed
+ * @param {number} rating returns the value selected
+ *  @param {color} filled  color in which the selected icons should be displayed
+ *  @param {color} unfilled color in which the unselected icons should be displayed
+ *  @param {number} onRating stores the change in icon value
+ *  @param {number} size  size of the icon 
+ *  @param {react-icon} icon  icon from react-icons-kit 
+ * @returns rating component
+ */
 
 const Rate = ({ count, rating, filled, unfilled, onRating,size,icon }) => {
   const [hoverRating, setHoverRating] = useState(0);
