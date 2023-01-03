@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from "react";
+import  { useMemo, useState} from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 import {Icon} from "react-icons-kit";
 import {star} from 'react-icons-kit/fa/star'
