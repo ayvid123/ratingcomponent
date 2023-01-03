@@ -79,7 +79,7 @@ Rate.defaultProps = {
   filled: "#f5eb3b",
   unfilled: "#DCDCDC",
   icon: _star.star,
-  size: 30
+  size: 20
 };
 var _default = Rate;
 exports["default"] = _default;

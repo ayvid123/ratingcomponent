@@ -53,7 +53,7 @@ Rate.defaultProps = {
   filled: "#f5eb3b",
   unfilled: "#DCDCDC",
   icon:star,
-  size:30,
+  size:20,
 };
 
 export default Rate;
