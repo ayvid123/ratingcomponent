@@ -3,47 +3,50 @@ import React from 'react';
 import PropTypes from "prop-types";
 import {Icon} from "react-icons-kit";
 import {star} from 'react-icons-kit/fa/star'
+//count, rating, filled, unfilled, onRating,size,icon
+
 /**
  * 
- * @param {number} count  No. of  icons needed
- * @param {number} rating returns the value selected
- *  @param {color} filled  color in which the selected icons should be displayed
- *  @param {color} unfilled color in which the unselected icons should be displayed
- *  @param {number} onRating stores the change in icon value
- *  @param {number} size  size of the icon 
- *  @param {react-icon} icon  icon from react-icons-kit 
- * @returns rating component
+ * @param {Object} props
+ * @param {Number} props.count No of icons needed
+ * @param {Number} props.rating Give the value from onRating as a parameter
+ * @param {color} props.filled  Color in which the selected icons should be dispalyed
+ * @param {color} props.unfilled  Color in which the unselected icons should be dispalyed
+ * @param {Number} props.onRating Returns the change in value in rating component
+ * @param {Number} props.size  Size in which icons should be displayed
+ * @param {Icon} props.icon  icon from react-icons-kit 
+ * @returns 
  */
 
-const Rate = ({ count, rating, filled, unfilled, onRating,size,icon }) => {
+const Rate = (props) => {
   const [hoverRating, setHoverRating] = useState(0);
 
   const getColor = (index) => {
     if (hoverRating >= index) {
-      return filled;
-    } else if (!hoverRating && rating >= index) {
-      return filled;
+      return props.filled;
+    } else if (!hoverRating && props.rating >= index) {
+      return props.filled;
     }
-    return unfilled;
+    return props.unfilled;
   };
 
   const starRating = useMemo(() => {
-    return Array(count)
+    return Array(props.count)
       .fill(0)
       .map((_, i) => i + 1)
       .map((idx) => (
         <Icon
           key={idx}
           className="cursor-pointer"
-          size={size}
-          icon={icon}
-          onClick={() => onRating(idx)}
+          size={props.size}
+          icon={props.icon}
+          onClick={() => props.onRating(idx)}
           style={{ color: getColor(idx) }}
           onMouseEnter={() => setHoverRating(idx)}
           onMouseLeave={() => setHoverRating(0)}
         />
       ));
-  }, [count, rating, hoverRating]);
+  }, [props.count, props.rating, hoverRating]);
 
   return <div>{starRating}</div>;
 };
