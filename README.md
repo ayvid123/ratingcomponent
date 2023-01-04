@@ -31,7 +31,7 @@ const [X, setX] = useState(0);
 | rating  | required | It is used to store the rated value|         |
 | Onrating| required | It is used to return the changes in rating value | |
 | icon | optional | Icon in which rating component needed | star icon ⭐ |
-| filled| optional |Color in which selected icons should be displayed |<span style="color:yellow;">YELLOW</span>   |
-| unfilled | optional |Color in which unselected icons should be displayed | <span style="color:grey;">Grey</span> |
+| filled| optional |Color in which selected icons should be displayed | Yellow |
+| unfilled | optional |Color in which unselected icons should be displayed | Grey |
 | count | optional | No of icons neede in rating component | 5⭐ |
 | size | optional | size in which the icon should be displayed | 20 |
