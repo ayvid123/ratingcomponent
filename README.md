@@ -33,5 +33,5 @@ const [X, setX] = useState(0);
 | icon | optional | Icon in which rating component needed | star icon ⭐ |
 | filled| optional |Color in which selected icons should be displayed | Yellow |
 | unfilled | optional |Color in which unselected icons should be displayed | Grey |
-| count | optional | No of icons neede in rating component | 5⭐ |
+| count | optional | No of icons needed in rating component | 5⭐ |
 | size | optional | size in which the icon should be displayed | 20 |
